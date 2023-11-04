@@ -10,9 +10,11 @@
 		1201DC3F2AF6422B00521839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201DC3E2AF6422B00521839 /* AppDelegate.swift */; };
 		1201DC412AF6422B00521839 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201DC402AF6422B00521839 /* SceneDelegate.swift */; };
 		1201DC432AF6422B00521839 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201DC422AF6422B00521839 /* ViewController.swift */; };
-		1201DC462AF6422B00521839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1201DC442AF6422B00521839 /* Main.storyboard */; };
 		1201DC482AF6422C00521839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1201DC472AF6422C00521839 /* Assets.xcassets */; };
 		1201DC4B2AF6422C00521839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1201DC492AF6422C00521839 /* LaunchScreen.storyboard */; };
+		1201DC542AF6580C00521839 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201DC532AF6580C00521839 /* Hero.swift */; };
+		1201DC582AF6588000521839 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201DC572AF6588000521839 /* HeroViewModel.swift */; };
+		1201DC5A2AF66C2E00521839 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1201DC592AF66C2E00521839 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,12 @@
 		1201DC3E2AF6422B00521839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1201DC402AF6422B00521839 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1201DC422AF6422B00521839 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1201DC452AF6422B00521839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1201DC472AF6422C00521839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1201DC4A2AF6422C00521839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1201DC4C2AF6422C00521839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1201DC532AF6580C00521839 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		1201DC572AF6588000521839 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
+		1201DC592AF66C2E00521839 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		1201DC3D2AF6422B00521839 /* Dota2 Hero */ = {
 			isa = PBXGroup;
 			children = (
-				1201DC3E2AF6422B00521839 /* AppDelegate.swift */,
+				1201DC552AF6582A00521839 /* ViewModel */,
+				1201DC522AF6580100521839 /* Model */,
+				1201DC562AF6583100521839 /* View */,
 				1201DC402AF6422B00521839 /* SceneDelegate.swift */,
-				1201DC422AF6422B00521839 /* ViewController.swift */,
-				1201DC442AF6422B00521839 /* Main.storyboard */,
+				1201DC3E2AF6422B00521839 /* AppDelegate.swift */,
 				1201DC472AF6422C00521839 /* Assets.xcassets */,
 				1201DC492AF6422C00521839 /* LaunchScreen.storyboard */,
 				1201DC4C2AF6422C00521839 /* Info.plist */,
 			);
 			path = "Dota2 Hero";
+			sourceTree = "<group>";
+		};
+		1201DC522AF6580100521839 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1201DC532AF6580C00521839 /* Hero.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1201DC552AF6582A00521839 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1201DC572AF6588000521839 /* HeroViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1201DC562AF6583100521839 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1201DC422AF6422B00521839 /* ViewController.swift */,
+				1201DC592AF66C2E00521839 /* DetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +157,6 @@
 			files = (
 				1201DC4B2AF6422C00521839 /* LaunchScreen.storyboard in Resources */,
 				1201DC482AF6422C00521839 /* Assets.xcassets in Resources */,
-				1201DC462AF6422B00521839 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,20 +170,15 @@
 				1201DC432AF6422B00521839 /* ViewController.swift in Sources */,
 				1201DC3F2AF6422B00521839 /* AppDelegate.swift in Sources */,
 				1201DC412AF6422B00521839 /* SceneDelegate.swift in Sources */,
+				1201DC5A2AF66C2E00521839 /* DetailViewController.swift in Sources */,
+				1201DC582AF6588000521839 /* HeroViewModel.swift in Sources */,
+				1201DC542AF6580C00521839 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1201DC442AF6422B00521839 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1201DC452AF6422B00521839 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1201DC492AF6422C00521839 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +242,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -297,9 +321,9 @@
 				INFOPLIST_FILE = "Dota2 Hero/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,9 +349,9 @@
 				INFOPLIST_FILE = "Dota2 Hero/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
